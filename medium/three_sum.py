@@ -32,3 +32,11 @@ class Solution(object):
                         right -= 1
 
         return triplets
+
+
+solution = Solution()
+
+nums = [-1, 0, 1, 2, -1, -4]
+result = solution.threeSum(nums)
+
+print(result)
