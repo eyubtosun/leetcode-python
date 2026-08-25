@@ -1,0 +1,20 @@
+class Solution:
+    def removeDuplicates(self, nums: list[int]) -> int:
+        if not nums: 
+            return 0
+        
+        write = 1
+
+        for read in range(1, len(nums)):
+            if nums[read] != nums[read - 1]:
+                nums[write] = nums[read]
+                write += 1
+
+        return write
+    
+
+nums = [1, 1, 2]
+answer = Solution().removeDuplicates(nums)
+
+print("Number of unique values:", answer)
+print("Unique values", nums[:answer])
